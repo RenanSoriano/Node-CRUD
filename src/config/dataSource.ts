@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 //import path from "path";
-
+import "reflect-metadata";
 
 //importar dotenv pra configurar isso aqui com as variaveis de ambiente depois
 //por enquanto hardcoded mesmo
@@ -10,19 +10,12 @@ export const AppDataSource = new DataSource({
     type: "postgres",
     host: "localhost",
     port: 5432,
-    username: "test",
-    password: "test",
-    database: "test",
-    synchronize: false,
+    username: "postgres",
+    password: "cafeh",
+    database: "node_crud",
+    synchronize: true,
     entities:[],
     //migrations: ["src/database/migrations/**/*.ts"],
     //migrationsTableName: "Acoes",
 });
 
-AppDataSource.initialize()
-    .then(() => {
-        console.log("Data Source has been initialized!")
-    })
-    .catch((err) => {
-        console.error("Error during Data Source initialization", err)
-    });

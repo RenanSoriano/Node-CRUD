@@ -1,5 +1,5 @@
-import { Entity, Column, CreateDateColumn, PrimaryGeneratedColumn } from 'typeorm';
-
+import { Entity, Column, CreateDateColumn, PrimaryColumn } from 'typeorm';
+@Entity()
 export class Acoes {
     name: string;
     valor: number;
