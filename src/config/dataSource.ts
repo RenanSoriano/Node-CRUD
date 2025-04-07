@@ -14,7 +14,7 @@ export const AppDataSource = new DataSource({
     password: "cafeh",
     database: "node_crud",
     synchronize: true,
-    entities:[],
+    entities:["src/entities/*.ts"],
     //migrations: ["src/database/migrations/**/*.ts"],
     //migrationsTableName: "Acoes",
 });
