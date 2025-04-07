@@ -1,11 +1,14 @@
+/*
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import { AppDataSource } from "src/config/dataSource.ts";
+
 
 export class Test1743794821971 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "Ações",
+                name: "Acoes",
                 columns: [
                     {
                         name: "name",
@@ -27,7 +30,8 @@ export class Test1743794821971 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("Ações");
+        await queryRunner.dropTable("Acoes");
     }
 
 }
+*/
