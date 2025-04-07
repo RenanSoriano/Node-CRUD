@@ -1,13 +1,24 @@
-import { Entity, Column, CreateDateColumn, PrimaryColumn } from 'typeorm';
+import { Entity, Column, CreateDateColumn, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+
 @Entity()
 export class Acoes {
+    @PrimaryColumn()
+    id: string
+    @Column()
     name: string;
+    @Column()
     valor: number;
-    data: Date;
+    @CreateDateColumn()
+    createdDate: Date;
+    @UpdateDateColumn()
+    updatedDate: Date;
 
-    constructor(name: string, valor: number, data: Date) {
+
+    constructor(id: string, name: string, valor: number, createdDate: Date, updatedDate: Date) {
+        this.id = id;
         this.name = name;
         this.valor = valor;
-        this.data = data;
+        this.createdDate = createdDate;
+        this.updatedDate = updatedDate;
     }
 }
