@@ -1,7 +1,7 @@
 import { Entity, Column, CreateDateColumn, PrimaryColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
-export class Acoes {
+export default class Stock {
     @PrimaryColumn()
     id: string
     @Column()
