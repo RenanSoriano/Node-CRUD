@@ -1,0 +1,4 @@
+- terminar controller com os métodos do StockRepo que interagem com o view
+- integrar com o API fmp
+- Serviço de atualização das stocks a cada fechamento de mercado (cron)
+- 

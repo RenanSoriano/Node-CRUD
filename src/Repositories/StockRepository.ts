@@ -11,10 +11,15 @@ export default class StockRepository implements InterfaceStockRepository {
         this.stockRepository = stockRepository;
     }
 
+
+    //basicamente o único método que interage com o view
     async getStocks(): Promise<Stock[]> {
         return await this.stockRepository.find();
     }
 
+
+
+    //Isso aqui é realmente necessário? seria usad só internamente não?
     async getStockById(id: string): Promise<{ success: boolean; message?: string; stock?: Stock }> {
         try {
             const stock = await this.stockRepository.findOneBy({ id });
@@ -38,6 +43,8 @@ export default class StockRepository implements InterfaceStockRepository {
         }
     }
 
+
+    // só usada internamente?  mas achei relevante, usuario não vai criar uma stock
     async createStock(stock: Stock): Promise<{ success: boolean; message?: string }> {
         try {
             const result = await this.stockRepository.save(stock);
@@ -53,6 +60,8 @@ export default class StockRepository implements InterfaceStockRepository {
         }
     }
 
+
+    //essa aqui só é usada internamente mesmo, vai ser usada com o service de atualização das stocks (cron) ?
     async updateStock(id: string, stock: Stock): Promise<{ success: boolean; message?: string }> {
         try {
             await this.stockRepository.update(id, stock);
@@ -68,6 +77,8 @@ export default class StockRepository implements InterfaceStockRepository {
         }
     }
 
+
+    //essa aqui nem vai ser usada kkkkk
     async deleteStock(id: string): Promise<{ success: boolean; message?: string }> {
         try {
             await this.stockRepository.delete(id);
