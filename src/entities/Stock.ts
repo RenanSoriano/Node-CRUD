@@ -1,4 +1,4 @@
-import { Entity, Column, CreateDateColumn, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { Entity, Column, PrimaryColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
 export default class Stock {
@@ -8,17 +8,17 @@ export default class Stock {
     name: string;
     @Column()
     valor: number;
-    @CreateDateColumn()
-    createdDate: Date;
+    //@CreateDateColumn()*/
+    //createdDate: Date;
     @UpdateDateColumn()
     updatedDate: Date;
 
 
-    constructor(id: string, name: string, valor: number, createdDate: Date, updatedDate: Date) {
+    constructor(id: string, name: string, valor: number, updatedDate: Date) {
         this.id = id;
         this.name = name;
         this.valor = valor;
-        this.createdDate = createdDate;
+        //this.createdDate = createdDate;
         this.updatedDate = updatedDate;
     }
 }
