@@ -1,8 +1,8 @@
 import StockRepository from "../Repositories/StockRepository";
 import { Request, Response } from "express";
-import  Stock  from "../entities/Stock";
 
-//aqui acho que só preciso colocar o getStocks
+
+
 
 
 

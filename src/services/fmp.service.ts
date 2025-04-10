@@ -1,7 +1,7 @@
 import axios from 'axios';
 import dotenv from 'dotenv';
 
-// aqui vai o service da API
+
 dotenv.config();
 
 export class FmpService {
