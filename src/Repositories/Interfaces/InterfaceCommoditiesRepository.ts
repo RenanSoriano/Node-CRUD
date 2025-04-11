@@ -16,25 +16,4 @@ export default interface InterfaceCommoditieRepository {
         success: boolean;
         message?: string;
     }>;
-
-    // Update an existing commodity
-    updateCommoditie(
-        id: string,
-        updatedFields: Partial<Commoditie>
-    ): Promise<{
-        success: boolean;
-        message?: string;
-    }>;
-
-    // Delete a commodity by ID
-    deleteCommoditie(id: string): Promise<{
-        success: boolean;
-        message?: string;
-    }>;
-
-    // Bulk create or update commodities
-    bulkUpsertCommodities(commodities: Commoditie[]): Promise<{
-        success: boolean;
-        message?: string;
-    }>;
 }

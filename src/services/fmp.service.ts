@@ -19,7 +19,7 @@ export default class FmpService {
     async getHistoricalPrices(symbol: string): Promise<any> {
         try {
             const response = await axios.get(
-                `${this.baseUrl}/historical-price-full/${symbol}`,
+                `${this.baseUrl}/quote/${symbol}`,
                 {
                     params: {
                         apikey: this.apiKey,
