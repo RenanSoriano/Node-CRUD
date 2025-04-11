@@ -1,5 +1,4 @@
-- refatorar pra buscar o preço do café
-- refatorar entity e repo pra fazer sentido com a resposta da API
+- refatorar pra buscar o preço do café (falta atualizar o endpoint)
 - configurar rotas pro front 
 - router com o express  e testa com o postman ou insomnia
 

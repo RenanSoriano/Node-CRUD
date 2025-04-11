@@ -18,4 +18,8 @@ export default class StockController {
             res.status(500).json({ message: "Error fetching stocks" });
         }
     }
+
+    public async createCommoditie(req: Request, res: Response){
+
+}
 }
