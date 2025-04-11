@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
-import {FmpService} from '../../src/services/fmp.service';
+import FmpService from '../../src/services/fmp.service';
 
 jest.mock('axios');
 
