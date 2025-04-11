@@ -1,4 +1,5 @@
 - refatorar pra buscar o preço do café (falta atualizar o endpoint)
+- refatorar pro uuid ficar no controller
 - configurar rotas pro front 
 - router com o express  e testa com o postman ou insomnia
 

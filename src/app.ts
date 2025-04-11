@@ -1,6 +1,6 @@
 import { AppDataSource } from "./config/dataSource";
 import express from "express";
-import { FmpService } from "./services/fmp.service";
+import  FmpService  from "./services/fmp.service";
 import { CommoditieSchedulerService } from "./services/scheduler";
 import Commoditie from "./entities/Commoditie";
 import { TRACKED_COMMODITIES, UPDATE_SCHEDULE } from "./config/commodities.config";
