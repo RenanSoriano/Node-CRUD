@@ -1,7 +1,7 @@
 import { AppDataSource } from "./config/dataSource";
 import express from "express";
 import  FmpService  from "./services/fmp.service";
-import { CommoditieSchedulerService } from "./services/scheduler";
+//import { CommoditieSchedulerService } from "./services/scheduler";
 import Commoditie from "./entities/Commoditie";
 import { TRACKED_COMMODITIES, UPDATE_SCHEDULE } from "./config/commodities.config";
 import CommoditieRepository from "./Repositories/CommoditieRepository";
@@ -26,15 +26,15 @@ AppDataSource.initialize()
         const commoditieRepository = new CommoditieRepository(commoditieRepositoryInstance);
 
         // Create and start the Commodities Scheduler
-        const commoditieScheduler = new CommoditieSchedulerService(
+       /* const commoditieScheduler = new CommoditieSchedulerService(
             commoditieRepository,
             fmpService,
             TRACKED_COMMODITIES,
             UPDATE_SCHEDULE
-        );
+        );*/
 
         // Start the scheduler
-        commoditieScheduler.startScheduler();
+        //commoditieScheduler.startScheduler();
 
         // Optional: Run an initial update when the app starts
         // commoditieScheduler.manualUpdate();
