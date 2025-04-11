@@ -1,5 +1,4 @@
 import { DataSource } from "typeorm";
-//import path from "path";
 import "reflect-metadata";
 
 //importar dotenv pra configurar isso aqui com as variaveis de ambiente depois
@@ -15,7 +14,5 @@ export const AppDataSource = new DataSource({
     database: "node_crud",
     synchronize: true,
     entities:["src/entities/*.ts"],
-    //migrations: ["src/database/migrations/**/*.ts"],
-    //migrationsTableName: "Acoes",
 });
 
