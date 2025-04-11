@@ -2,6 +2,7 @@
 - refatorar pro uuid ficar no controller
 - configurar rotas pro front 
 - router com o express  e testa com o postman ou insomnia
+- refazer o cron-job
 
 
 To better handle the API response, consider adding a helper method to transform API data to your entity format:
