@@ -1,4 +1,4 @@
-import Stock from "../../entities/Stock";
+import Stock from "../../entities/Commoditie";
 
 
 export default interface InterfaceStockRepository {

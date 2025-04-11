@@ -1,6 +1,6 @@
 import { Repository } from "typeorm";
-import Stock from "../entities/Stock";
-import InterfaceStockRepository from "./Interfaces/InterfaceStockRepository";
+import Stock from "../entities/Commoditie";
+import InterfaceStockRepository from "./Interfaces/InterfaceCommoditiesRepository";
 
 export default class StockRepository implements InterfaceStockRepository {
     private stockRepository: Repository<Stock>;
