@@ -14,12 +14,5 @@ export default interface InterfaceStockRepository {
         success: boolean;
         message?: string;
     }>;
-    updateStock(id:string, stock: Stock): Promise<{
-        success: boolean;
-        message?: string;
-    }>;
-    deleteStock(id: string): Promise<{
-        success: boolean;
-        message?: string;
-    }>;
+
 }

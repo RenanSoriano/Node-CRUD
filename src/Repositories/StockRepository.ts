@@ -9,7 +9,7 @@ export default class StockRepository implements InterfaceStockRepository {
         this.stockRepository = stockRepository;
     }
 
-    // basicamente o único método que interage com o view
+    
     // actually is necessary to implement getStockById and createStock.
     // Frontend will call the routes when populating the dashboard, pages
     // and when the system inserts new data in db. 
@@ -20,7 +20,7 @@ export default class StockRepository implements InterfaceStockRepository {
     // consider mantining it here.
 
     async getStocks(): Promise<Array<Stock>> {
-        // prefer using Array while describing the type os response and variables. 
+     
         return await this.stockRepository.find();
     }
     
@@ -35,7 +35,7 @@ export default class StockRepository implements InterfaceStockRepository {
             if (!stock) {
                 return {
                     success: false,
-                    message: "Stock not found" // there's no need for inserting id on api response 
+                    message: "Stock not found" 
                 };
             }
             
@@ -54,7 +54,7 @@ export default class StockRepository implements InterfaceStockRepository {
     async createStock(stock: Stock): Promise<{ success: boolean; message?: string }> {
         try {
             await this.stockRepository.save(stock);
-            return { success: true }; // when return is true, this method returns only a boolean value.
+            return { success: true }; 
 
         } catch (error) {
             return {

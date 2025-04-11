@@ -1,6 +1,5 @@
 import { Entity, Column, PrimaryColumn, UpdateDateColumn } from 'typeorm';
-// If you will not use code anymore consider deleting it. 
-// It keeps your code clean and turns the maintainance easier
+
 
 @Entity()
 export default class Stock {

@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-// Create new class instances with the export default command
+
 export default class FmpService {
     private apiKey: string;
     private baseUrl: string;
