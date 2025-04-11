@@ -1,9 +1,6 @@
 import { AppDataSource } from "./config/dataSource";
 import express from "express";
 
-
-
-
 const app = express();
 
 AppDataSource.initialize()
