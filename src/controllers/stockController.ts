@@ -1,4 +1,4 @@
-import StockRepository from "../Repositories/StockRepository";
+import StockRepository from "../Repositories/CommoditieRepository";
 import { Request, Response } from "express";
 
 
