@@ -1,7 +1,5 @@
-- refatorar pra buscar o preço do café (falta atualizar o endpoint)
+- refatorar pra lógica do fmp.service ficar no método createCommoditie do repositório / atualizar interface (?)
 - refatorar pro uuid ficar no controller
-- configurar rotas pro front 
-- router com o express  e testa com o postman ou insomnia
 - refazer o cron-job
 
 

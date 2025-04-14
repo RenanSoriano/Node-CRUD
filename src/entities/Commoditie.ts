@@ -6,36 +6,36 @@ export default class Commoditie {
     @PrimaryColumn()
     id: string;
 
-    @Column()
+    @Column({ nullable: true })
     name: string;
 
     @Column()
     symbol: string;
 
-    @Column()
-    price: number;
+    @Column({ nullable: true })
+    price: string;
 
-    @Column()
-    dayLow: number;
+    @Column({ nullable: true })
+    dayLow: string;
 
-    @Column()
-    dayHigh: number;
+    @Column({ nullable: true })
+    dayHigh: string;
 
-    @Column()
-    openPrice: number;
+    @Column({ nullable: true })
+    openPrice: string;
 
-    @Column()
-    previousClose: number;
+    @Column({ nullable: true })
+    previousClose: string;
 
     constructor(
         id: string = uuidv4(), // Generate a UUID by default
         name: string,
         symbol: string,
-        price: number,
-        dayLow: number,
-        dayHigh: number,
-        openPrice: number,
-        previousClose: number
+        price: string,
+        dayLow: string,
+        dayHigh: string,
+        openPrice: string,
+        previousClose: string
     ) {
         this.id = id;
         this.name = name;

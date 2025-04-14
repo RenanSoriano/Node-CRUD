@@ -1,6 +1,6 @@
 import express from "express";
 import CommoditieRepository from "../Repositories/CommoditieRepository";
-import Commoditie from "../entities/Commoditie"; // Import the Commoditie entity
+import Commoditie from "../entities/Commoditie"; 
 import { AppDataSource } from "../config/dataSource";
 import CommoditieController from "../controllers/commoditieController";
 
@@ -9,8 +9,8 @@ const commoditieController = new CommoditieController(commoditieRepository);
 
 const router = express.Router();
 
-router.get("/", (req, res) => commoditieController.getCommodities(req, res));
+router.get("/coffee", (req, res) => commoditieController.getCommodities(req, res));
+
 
 export default router;
 
-// Define the routes for commodities
