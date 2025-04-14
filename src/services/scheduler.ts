@@ -46,7 +46,7 @@ export class CommoditieSchedulerService {
                     '0'
                 );
                 
-                const result = await this.commoditieRepository.createCommoditie(commodity);
+                const result = await this.commoditieRepository.createCommoditie(symbol);
                 
                 if (result.success) {
                     this.logger.info(`Successfully updated commodity: ${symbol}`);

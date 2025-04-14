@@ -28,7 +28,7 @@ export default class Commoditie {
     previousClose: string;
 
     constructor(
-        id: string = uuidv4(), // Generate a UUID by default
+        id: string, 
         name: string,
         symbol: string,
         price: string,

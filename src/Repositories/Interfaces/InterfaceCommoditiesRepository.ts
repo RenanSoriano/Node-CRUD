@@ -12,7 +12,7 @@ export default interface InterfaceCommoditieRepository {
     }>;
 
     // Create a new commodity
-    createCommoditie(commoditie: Commoditie): Promise<{
+    createCommoditie(symbol:string): Promise<{
         success: boolean;
         message?: string;
     }>;

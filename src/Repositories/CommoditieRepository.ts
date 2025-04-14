@@ -77,21 +77,28 @@ export default class CommoditieRepository implements InterfaceCommoditieReposito
 
 
 
-    public async createCommoditie(commoditie: Commoditie): Promise<{ success: boolean; message?: string }> {
+    public async createCommoditie(symbol: string): Promise<{ success: boolean; message?: string }> {
         try {
-            const apiJSON = await this.getHistoricalPrices(commoditie.symbol);
-            if (!apiJSON || apiJSON.length === 0) {
-                throw new Error('No historical prices found for the given symbol');
+            const apiJSON = await this.getHistoricalPrices(symbol);
+            if (!apiJSON) {
+                return {
+                    success: false,
+                    message: `Could not get data from API`,
+                };
             }
 
             const apiResponse = apiJSON[0];
-            commoditie.id = uuidv4();
-            commoditie.price = apiResponse.price;
-            commoditie.dayLow = apiResponse.dayLow;
-            commoditie.dayHigh = apiResponse.dayHigh;
-            commoditie.openPrice = apiResponse.openPrice;
-            commoditie.previousClose = apiResponse.previousClose;
-            await this.CommoditieRepository.save(commoditie);
+            const coffeeStock = new Commoditie(
+                uuidv4(),
+                apiResponse.name ,
+                symbol, 
+                apiResponse.price,
+                apiResponse.dayLow,
+                apiResponse.dayHigh,
+                apiResponse.openPrice,
+                apiResponse.previousClose
+            );
+            await this.CommoditieRepository.save(coffeeStock);
             return {success: true};
         } catch (error) {
             return {
