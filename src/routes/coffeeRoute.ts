@@ -10,7 +10,7 @@ const commoditieController = new CommoditieController(commoditieRepository);
 const router = express.Router();
 
 router.get("/coffee", (req, res) => commoditieController.getCommodities(req, res));
-
+router.post("/coffee", (req, res) => commoditieController.createCommoditie(req, res));
 
 export default router;
 
